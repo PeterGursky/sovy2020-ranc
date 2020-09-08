@@ -11,48 +11,28 @@
 
 <body>
 	<header>
-		<TABLE cellSpacing="0" cellPadding="0" width="100%" border="0">
-			<TR>
-				<TD vAlign="top" noWrap align="left" width="100%" background="img/top_bacground.gif">
-					<A href="http://www.transylwahnja.eu"><IMG height="91" src="img/title.jpg" width="477"
-							align="middle" border="0"></A>
-				</TD>
-			</TR>
-		</TABLE>
-		<table cellspacing="0" cellpadding="0" width="100%" border="0">
-			<tr>
-				<td bgcolor="99ff33" colspan="3" height="2"><img height="1" src="img/pixel.gif" width="1"></td>
-			</tr>
-			<tr>
-				<td valign="middle" align="center" width="193" bgcolor="336600">
-					<a href="http://www.transylwahnja.eu/ranch/nem.html"><img src="img/deutsch.gif" width="25"
-							border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="http://www.transylwahnja.eu"><img src="img/slovak.gif" width="25" border="0"></a></td>
-				<td valign="bottom" align="left" bgcolor="336600">
-					<!-------- Home page---------->
-					<select class="textfield" onChange="self.location.href=this.options[selectedIndex].value;">
-						<option selected>Vyber si farmu:</option>
-						<optgroup label="---------------------------------------------">
-
-							<option value="http://www.ffmm.sk">Rodinná farma Mašekov mlyn, Vráble</option>
-							<option value="http://www.agrokruh.net">AgroKruh, Ján Šlinský</option>
-						</optgroup>
-					</select>
-				</td>
-				<td valign="middle" align="right" bgcolor="336600">
-					<!-- will show data -->
-					<script language=JavaScript>
-						var mesiace = new Array("január", "február", "marec", "apríl", "máj", "jún", "júl", "august", "september", "október", "november", "december");
-						var dni_v_tyzdni = new Array("nedeľa", "pondelok", "utorok", "streda", "štvrtok", "piatok", "sobota");
-						dnes = new Date();
-						document.write("<font style='font-family: trebuchet ms;  font-size: 10pt;  color: white;  text-align: left;'>
-							& nbsp; & nbsp; & nbsp; <b>Dnes je "+dni_v_tyzdni[dnes.getDay()]+" </b> & nbsp; "+dnes.getDate()+".
-					"+mesiace[dnes.getMonth()]+" "+dnes.getYear());
-					</script>
-					&nbsp;&nbsp;&nbsp;
-				</td>
-			</tr>
-		</table>
+		<div id="header_image">
+			<img src="img/title.jpg" height="91" width="477" alt="Transylwahnja title">
+		</div>
+		<div id="language_flags">
+			<ul>
+				<li>
+					<a href="./de/"><img src="img/deutsch.gif" width="38" height="26" alt="deutche sprache"></a>
+				</li>
+				<li>
+					<a href="/"><img src="img/slovak.gif" width="38" height="26" alt="slovenský jazyk"></a>
+				</li>
+			</ul>
+		</div>
+		<div id="date_panel">
+			<script>
+				var mesiace = new Array("január", "február", "marec", "apríl", "máj", "jún", "júl", "august", "september", "október", "november", "december");
+				var dni_v_tyzdni = new Array("nedeľa", "pondelok", "utorok", "streda", "štvrtok", "piatok", "sobota");
+				var dnes = new Date();
+				var el = document.getElementById("date_panel");
+				el.textContent = "Dnes je " + dni_v_tyzdni[dnes.getDay()] + " " + dnes.getDate() + "." + mesiace[dnes.getMonth()] + " " + dnes.getFullYear();
+			</script>
+		</div>
 	</header>
 
 	<nav>
@@ -73,482 +53,301 @@
 	</nav>
 
 	<main>
-		<table width="100%" border="0" cellspacing="1" cellpadding="2" bgcolor="046133">
-			<tr bgcolor="ccff99">
-				<td bgcolor="#EEFFDD">
-					<p>
-						<font face="Arial" size="2">Internetová stránka Ranču Transylwahnja sprístupňuje
-							informácie o chove koní, komposte, ekologickom poľnohospodárstve a výrobe
-							domácich
-							potravín rodiny Pipovcov. Uplatňuje princípy <a href="http://www.agrowebcee.net"
-								target="_blank"><b>AgroWeb Networku</b></a>,
-							ktorého cieľom je výmena skúseností medzi agro-ekologicky zameranými ľuďmi,
-							organizáciami a farmami produkujúcimi biopotraviny.
-					</p>
+		<aside id="info_banner">
+			Internetová stránka Ranču Transylwahnja sprístupňuje informácie o chove koní, komposte, ekologickom
+			poľnohospodárstve a výrobe domácich potravín rodiny Pipovcov. Uplatňuje princípy <a
+				href="http://www.agrowebcee.net" target="_blank"><b>AgroWeb Networku</b></a>, ktorého cieľom je výmena
+			skúseností medzi agro-ekologicky zameranými ľuďmi, organizáciami a farmami produkujúcimi biopotraviny.
+		</aside>
+		<section id="main_content">
+			<h1>Čo nového na ranči</h1>
+			<article class="newsflash">
+				<a href="javascript:popImage('foto/2019april.jpg',':: RANČ TRANSYLWAHNJA :: ','');">
+					<img src="foto/2019april_m.jpg" border="0" alt="Koník">
+				</a>
+				<time datetime="2019-04-01">apríl 2019</time>
+				<h2>Nesnívaj o svojom živote, ale ži svoj sen</h2>
+			</article>
+			<article class="newsflash">
+				<a href="javascript:popImage('foto/kone-perseus1.jpg',':: RANČ TRANSYLWAHNJA :: ','');">
+					<img src="foto/kone-perseus1_m.jpg" border="0" alt="Perzeus">
+				</a>
+				<time datetime="2019-04-01">apríl 2019</time>
+				<h2>Na ranč prichádza Perzeus</h2>
+				<p>Nový úžasný kôň, ktorého sme si osvojili priamo z aktívneho mezinárodného
+					Military sportu. Či krása v drezúre, prechádzky vo výške 170cm alebo
+					vytrvalosť v teréne, to je Perzeus.
+					Teraz, po spoľahlivo odpracovaných 18 rokoch si môže užívať konský raj na
+					ranči. Ďalšie fotky nájdete v galérii.
+				</p>
+			</article>
+			<article class="newsflash">
+				<a href="javascript:popImage('foto/kone-perseus1.jpg',':: RANČ TRANSYLWAHNJA :: ','');">
+					<img src="foto/kone-perseus1_m.jpg" border="0" alt="Perzeus">
+				</a>
+				<time datetime="2019-04-01">apríl 2019</time>
+				<h2>Obnovujeme aj mliečnu produkciu</h2>
+				<p>Na ranči sme privítali Jersey kravičku Barboru.</p>
+			</article>
+			<!--				<TR>
+					<TD align="right" width="120" bgColor="#EEFFDD">
+						<a href="javascript:popImage('foto/2018jesen.jpg',':: RANČ TRANSYLWAHNJA :: ','');">
+							<img src="foto/2018jesen_m.jpg" border="0" alt="Jeseň 2018"></a>
+					</TD>
+					<TD>
+						<TABLE cellSpacing="5" cellPadding="2" width="100%" border="0">
+							<TR bgColor="#EEFFDD">
+								<TD bgColor="#EEFFDD">
+									<font face="Verdana,Arial, Helvetica, sans-serif" size="xx-small">
+										<span class="info_text_xx-small">október 2018</span></font><br>
+									<B>
+										<font face="Verdana,Arial, Helvetica, sans-serif" size="x-small"><span
+												class="read_text">
+												Opravené, upratané, oživené. <font>
+									</b></a><br></font></b></a>
+									Užívame si prírodu. Prajeme všetkým zdravie a lásku v srdci.
+									</font></b></a><br></p>
+									</font>
+								</TD>
+							</TR>
+						</TABLE>
+					</TD>
+				</TR>
 
-				</td>
-			</tr>
-		</table>
+				<TR>
+					<TD align="right" width="120" bgColor="#EEFFDD">
+						<a href="javascript:popImage('foto/2018nakladne_auto.jpg',':: RANČ TRANSYLWAHNJA :: ','');">
+							<img src="foto/2018nakladne_auto_m.jpg" border="0" alt=""></a>
+					</TD>
+					<TD>
+						<TABLE cellSpacing="5" cellPadding="2" width="100%" border="0">
+							<TR bgColor="#EEFFDD">
+								<TD bgColor="#EEFFDD">
+									<font face="Verdana,Arial, Helvetica, sans-serif" size="xx-small">
+										<span class="info_text_xx-small">august 2018</span></font><br>
+									<B>
+										<font face="Verdana,Arial, Helvetica, sans-serif" size="x-small"><span
+												class="read_text">
+												Pracanti aj s novým 6 kolesovým pomocníkom z roku 1954<font>
+									</b></a><br></font></b></a>
+									</font></b></a><br></p>
+									</font>
+								</TD>
+							</TR>
+						</TABLE>
+					</TD>
+				</TR>
 
-		<br>
-		<table cellspacing=0 cellpadding=2 width="100%" border=0>
-			<tbody>
-				<tr>
-					<td valign=top bgcolor=336600>
-						<font face=Arial color=black size=2><b>
-								<font color="#ffffff">
-									ČO NOVÉHO V RANČI:</font>
-							</b></font>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-		<br>
-		<table cellSpacing="10" cellPadding="0" width="99%" bgColor="#EEFFDD" border="0">
+				<TR>
+					<TD align="right" width="120" bgColor="#EEFFDD">
+						<a href="javascript:popImage('foto/2018koniec_prenajmu.jpg',':: RANČ TRANSYLWAHNJA :: ','');">
+							<img src="foto/2018koniec_prenajmu_m.jpg" border="0" alt=""></a>
+					</TD>
+					<TD>
+						<TABLE cellSpacing="5" cellPadding="2" width="100%" border="0">
+							<TR bgColor="#EEFFDD">
+								<TD bgColor="#EEFFDD">
+									<font face="Verdana,Arial, Helvetica, sans-serif" size="xx-small">
+										<span class="info_text_xx-small">február 2018</span></font><br>
+									<B>
+										<font face="Verdana,Arial, Helvetica, sans-serif" size="x-small"><span
+												class="read_text">
+												Ukončili sme prenajatie<font>
+									</b></a><br></font></b></a>
+									Máme opraty opäť vo vlastných rukách.
+									</font></b></a><br></p>
+									</font>
+								</TD>
+							</TR>
+						</TABLE>
+					</TD>
+				</TR>
 
-			<TR>
-				<TD align="right" width="120" bgColor="#EEFFDD">
-					<a href="javascript:popImage('foto/2019april.jpg',':: RANČ TRANSYLWAHNJA :: ','');">
-						<img src="foto/2019april_m.jpg" border="0" alt="Kravička"></a>
-				</TD>
-				<TD>
-					<TABLE cellSpacing="5" cellPadding="2" width="100%" border="0">
-						<TR bgColor="#EEFFDD">
-							<TD bgColor="#EEFFDD">
-								<font face="Verdana,Arial, Helvetica, sans-serif" size="xx-small">
-									<span class="info_text_xx-small">apríl 2019</span></font><br>
-								<B>
-									<font face="Verdana,Arial, Helvetica, sans-serif" size="x-small"><span
-											class="read_text">
-											Nesnívaj o svojom živote, ale ži svoj sen<font>
-								</b></a><br></font></b></a>
-								</font></b></a><br></p>
-								</font>
-							</TD>
-						</TR>
-					</TABLE>
-				</TD>
-			</TR>
+				<TR>
+					<TD align="right" width="120" bgColor="#EEFFDD">
+						<a href="javascript:popImage('foto/2017strecha.jpg',':: RANČ TRANSYLWAHNJA :: ','');">
+							<img src="foto/2017strecha_m.jpg" border="0" alt=""></a>
+					</TD>
+					<TD>
+						<TABLE cellSpacing="5" cellPadding="2" width="100%" border="0">
+							<TR bgColor="#EEFFDD">
+								<TD bgColor="#EEFFDD">
+									<font face="Verdana,Arial, Helvetica, sans-serif" size="xx-small">
+										<span class="info_text_xx-small">august 2017</span></font><br>
+									<B>
+										<font face="Verdana,Arial, Helvetica, sans-serif" size="x-small"><span
+												class="read_text">
+												Domček dostal novú strechu<font>
+									</b></a><br></font></b></a>
+									</font></b></a><br></p>
+									</font>
+								</TD>
+							</TR>
+						</TABLE>
+					</TD>
+				</TR>
 
-			<TR>
-				<TD align="right" width="120" bgColor="#EEFFDD">
-					<a href="javascript:popImage('foto/kone-perseus1.jpg',':: RANČ TRANSYLWAHNJA :: ','');">
-						<img src="foto/kone-perseus1_m.jpg" border="0" alt="Perzeus"></a>
-				</TD>
-				<TD>
-					<TABLE cellSpacing="5" cellPadding="2" width="100%" border="0">
-						<TR bgColor="#EEFFDD">
-							<TD bgColor="#EEFFDD">
-								<font face="Verdana,Arial, Helvetica, sans-serif" size="xx-small">
-									<span class="info_text_xx-small">apríl 2019</span></font><br>
-								<B>
-									<font face="Verdana,Arial, Helvetica, sans-serif" size="x-small"><span
-											class="read_text">
-											Na ranč prichádza Perzeus<font>
-								</b></a><br></font></b></a>
-								Nový úžasný kôň, ktorého sme si osvojili priamo z aktívneho mezinárodného
-								Military sportu. Či krása v drezúre, prechádzky vo výške 170cm alebo
-								vytrvalosť v teréne, to je Perzeus.
-								Teraz, po spoľahlivo odpracovaných 18 rokoch si môže užívať konský raj na
-								ranči. Ďalšie fotky nájdete v galérii.</font></b></a><br></p>
-								</font>
-							</TD>
-						</TR>
-					</TABLE>
-				</TD>
-			</TR>
+				<TR>
+					<TD align="right" width="120" bgColor="#EEFFDD">
+						<a href="javascript:popImage('foto/2017jimi2.jpg',':: RANČ TRANSYLWAHNJA :: ','');">
+							<img src="foto/2017jimi2_m.jpg" border="0" alt="PF2008"></a>
+					</TD>
+					<TD>
+						<TABLE cellSpacing="5" cellPadding="2" width="100%" border="0">
+							<TR bgColor="#EEFFDD">
+								<TD bgColor="#EEFFDD">
+									<font face="Verdana,Arial, Helvetica, sans-serif" size="xx-small">
+										<span class="info_text_xx-small">máj 2017</span></font><br>
+									<B>
+										<font face="Verdana,Arial, Helvetica, sans-serif" size="x-small"><span
+												class="read_text">
+												Jimi potrebuje surne intenzívnu dlhodobú opravu zubov, už vedel
+												iba s bolesťami žuvať trávu.
+												<font>
+									</b></a><br></font></b></a>
+									Zubár už prvý zákrok spravil. Po prvom ošetrení zubov bol konečne schopný
+									znovu pribrať.
+									</font></b></a><br></p>
+									</font>
+								</TD>
+							</TR>
+						</TABLE>
+					</TD>
+				</TR>
 
-			<TR>
-				<TD align="right" width="120" bgColor="#EEFFDD">
-					<a href="javascript:popImage('foto/2019kravicka.jpg',':: RANČ TRANSYLWAHNJA :: ','');">
-						<img src="foto/2019kravicka_m.jpg" border="0" alt="Kravička"></a>
-				</TD>
-				<TD>
-					<TABLE cellSpacing="5" cellPadding="2" width="100%" border="0">
-						<TR bgColor="#EEFFDD">
-							<TD bgColor="#EEFFDD">
-								<font face="Verdana,Arial, Helvetica, sans-serif" size="xx-small">
-									<span class="info_text_xx-small">apríl 2019</span></font><br>
-								<B>
-									<font face="Verdana,Arial, Helvetica, sans-serif" size="x-small"><span
-											class="read_text">
-											Obnovujeme aj mliečnu produkciu.<font>
-								</b></a><br></font></b></a>
-								Na ranči sme privítali Jersey kravičku Barboru.
-								</font></b></a><br></p>
-								</font>
-							</TD>
-						</TR>
-					</TABLE>
-				</TD>
-			</TR>
+				<TR>
+					<TD align="right" width="120" bgColor="#EEFFDD">
+						<a href="javascript:popImage('foto/2017jimi.jpg',':: RANČ TRANSYLWAHNJA :: ','');">
+							<img src="foto/2017jimi_m.jpg" border="0" alt="PF2008"></a>
+					</TD>
+					<TD>
+						<TABLE cellSpacing="5" cellPadding="2" width="100%" border="0">
+							<TR bgColor="#EEFFDD">
+								<TD bgColor="#EEFFDD">
+									<font face="Verdana,Arial, Helvetica, sans-serif" size="xx-small">
+										<span class="info_text_xx-small">máj 2017</span></font><br>
+									<B>
+										<font face="Verdana,Arial, Helvetica, sans-serif" size="x-small"><span
+												class="read_text">
+												Vyhladovaný koník Jimi dostal u nás nový domov<font>
+									</b></a><br></font></b></a>
+									</font></b></a><br></p>
+									</font>
+								</TD>
+							</TR>
+						</TABLE>
+					</TD>
+				</TR>
 
-			<TR>
-				<TD align="right" width="120" bgColor="#EEFFDD">
-					<a href="javascript:popImage('foto/2018jesen.jpg',':: RANČ TRANSYLWAHNJA :: ','');">
-						<img src="foto/2018jesen_m.jpg" border="0" alt="Jeseň 2018"></a>
-				</TD>
-				<TD>
-					<TABLE cellSpacing="5" cellPadding="2" width="100%" border="0">
-						<TR bgColor="#EEFFDD">
-							<TD bgColor="#EEFFDD">
-								<font face="Verdana,Arial, Helvetica, sans-serif" size="xx-small">
-									<span class="info_text_xx-small">október 2018</span></font><br>
-								<B>
-									<font face="Verdana,Arial, Helvetica, sans-serif" size="x-small"><span
-											class="read_text">
-											Opravené, upratané, oživené. <font>
-								</b></a><br></font></b></a>
-								Užívame si prírodu. Prajeme všetkým zdravie a lásku v srdci.
-								</font></b></a><br></p>
-								</font>
-							</TD>
-						</TR>
-					</TABLE>
-				</TD>
-			</TR>
+				<TR>
+					<TD align="right" width="120" bgColor="#EEFFDD">
+						<a href="javascript:popImage('foto/2017mana.jpg',':: RANČ TRANSYLWAHNJA :: ','');">
+							<img src="foto/2017mana_m.jpg" border="0" alt="Mana"></a>
+					</TD>
+					<TD>
+						<TABLE cellSpacing="5" cellPadding="2" width="100%" border="0">
+							<TR bgColor="#EEFFDD">
+								<TD bgColor="#EEFFDD">
+									<font face="Verdana,Arial, Helvetica, sans-serif" size="xx-small">
+										<span class="info_text_xx-small">február 2017</span></font><br>
+									<B>
+										<font face="Verdana,Arial, Helvetica, sans-serif" size="x-small"><span
+												class="read_text">
+												Mana; Hunter (Shire x Furioso) Kráľovská Kobyla, odbehla vo veku
+												22 rokov do večných pastvín<font>
+									</b></a><br></font></b></a>
+									</font></b></a><br></p>
+									</font>
+								</TD>
+							</TR>
+						</TABLE>
+					</TD>
+				</TR>
 
-			<TR>
-				<TD align="right" width="120" bgColor="#EEFFDD">
-					<a href="javascript:popImage('foto/2018nakladne_auto.jpg',':: RANČ TRANSYLWAHNJA :: ','');">
-						<img src="foto/2018nakladne_auto_m.jpg" border="0" alt=""></a>
-				</TD>
-				<TD>
-					<TABLE cellSpacing="5" cellPadding="2" width="100%" border="0">
-						<TR bgColor="#EEFFDD">
-							<TD bgColor="#EEFFDD">
-								<font face="Verdana,Arial, Helvetica, sans-serif" size="xx-small">
-									<span class="info_text_xx-small">august 2018</span></font><br>
-								<B>
-									<font face="Verdana,Arial, Helvetica, sans-serif" size="x-small"><span
-											class="read_text">
-											Pracanti aj s novým 6 kolesovým pomocníkom z roku 1954<font>
-								</b></a><br></font></b></a>
-								</font></b></a><br></p>
-								</font>
-							</TD>
-						</TR>
-					</TABLE>
-				</TD>
-			</TR>
-
-			<TR>
-				<TD align="right" width="120" bgColor="#EEFFDD">
-					<a href="javascript:popImage('foto/2018koniec_prenajmu.jpg',':: RANČ TRANSYLWAHNJA :: ','');">
-						<img src="foto/2018koniec_prenajmu_m.jpg" border="0" alt=""></a>
-				</TD>
-				<TD>
-					<TABLE cellSpacing="5" cellPadding="2" width="100%" border="0">
-						<TR bgColor="#EEFFDD">
-							<TD bgColor="#EEFFDD">
-								<font face="Verdana,Arial, Helvetica, sans-serif" size="xx-small">
-									<span class="info_text_xx-small">február 2018</span></font><br>
-								<B>
-									<font face="Verdana,Arial, Helvetica, sans-serif" size="x-small"><span
-											class="read_text">
-											Ukončili sme prenajatie<font>
-								</b></a><br></font></b></a>
-								Máme opraty opäť vo vlastných rukách.
-								</font></b></a><br></p>
-								</font>
-							</TD>
-						</TR>
-					</TABLE>
-				</TD>
-			</TR>
-
-			<TR>
-				<TD align="right" width="120" bgColor="#EEFFDD">
-					<a href="javascript:popImage('foto/2017strecha.jpg',':: RANČ TRANSYLWAHNJA :: ','');">
-						<img src="foto/2017strecha_m.jpg" border="0" alt=""></a>
-				</TD>
-				<TD>
-					<TABLE cellSpacing="5" cellPadding="2" width="100%" border="0">
-						<TR bgColor="#EEFFDD">
-							<TD bgColor="#EEFFDD">
-								<font face="Verdana,Arial, Helvetica, sans-serif" size="xx-small">
-									<span class="info_text_xx-small">august 2017</span></font><br>
-								<B>
-									<font face="Verdana,Arial, Helvetica, sans-serif" size="x-small"><span
-											class="read_text">
-											Domček dostal novú strechu<font>
-								</b></a><br></font></b></a>
-								</font></b></a><br></p>
-								</font>
-							</TD>
-						</TR>
-					</TABLE>
-				</TD>
-			</TR>
-
-			<TR>
-				<TD align="right" width="120" bgColor="#EEFFDD">
-					<a href="javascript:popImage('foto/2017jimi2.jpg',':: RANČ TRANSYLWAHNJA :: ','');">
-						<img src="foto/2017jimi2_m.jpg" border="0" alt="PF2008"></a>
-				</TD>
-				<TD>
-					<TABLE cellSpacing="5" cellPadding="2" width="100%" border="0">
-						<TR bgColor="#EEFFDD">
-							<TD bgColor="#EEFFDD">
-								<font face="Verdana,Arial, Helvetica, sans-serif" size="xx-small">
-									<span class="info_text_xx-small">máj 2017</span></font><br>
-								<B>
-									<font face="Verdana,Arial, Helvetica, sans-serif" size="x-small"><span
-											class="read_text">
-											Jimi potrebuje surne intenzívnu dlhodobú opravu zubov, už vedel
-											iba s bolesťami žuvať trávu.
-											<font>
-								</b></a><br></font></b></a>
-								Zubár už prvý zákrok spravil. Po prvom ošetrení zubov bol konečne schopný
-								znovu pribrať.
-								</font></b></a><br></p>
-								</font>
-							</TD>
-						</TR>
-					</TABLE>
-				</TD>
-			</TR>
-
-			<TR>
-				<TD align="right" width="120" bgColor="#EEFFDD">
-					<a href="javascript:popImage('foto/2017jimi.jpg',':: RANČ TRANSYLWAHNJA :: ','');">
-						<img src="foto/2017jimi_m.jpg" border="0" alt="PF2008"></a>
-				</TD>
-				<TD>
-					<TABLE cellSpacing="5" cellPadding="2" width="100%" border="0">
-						<TR bgColor="#EEFFDD">
-							<TD bgColor="#EEFFDD">
-								<font face="Verdana,Arial, Helvetica, sans-serif" size="xx-small">
-									<span class="info_text_xx-small">máj 2017</span></font><br>
-								<B>
-									<font face="Verdana,Arial, Helvetica, sans-serif" size="x-small"><span
-											class="read_text">
-											Vyhladovaný koník Jimi dostal u nás nový domov<font>
-								</b></a><br></font></b></a>
-								</font></b></a><br></p>
-								</font>
-							</TD>
-						</TR>
-					</TABLE>
-				</TD>
-			</TR>
-
-			<TR>
-				<TD align="right" width="120" bgColor="#EEFFDD">
-					<a href="javascript:popImage('foto/2017mana.jpg',':: RANČ TRANSYLWAHNJA :: ','');">
-						<img src="foto/2017mana_m.jpg" border="0" alt="Mana"></a>
-				</TD>
-				<TD>
-					<TABLE cellSpacing="5" cellPadding="2" width="100%" border="0">
-						<TR bgColor="#EEFFDD">
-							<TD bgColor="#EEFFDD">
-								<font face="Verdana,Arial, Helvetica, sans-serif" size="xx-small">
-									<span class="info_text_xx-small">február 2017</span></font><br>
-								<B>
-									<font face="Verdana,Arial, Helvetica, sans-serif" size="x-small"><span
-											class="read_text">
-											Mana; Hunter (Shire x Furioso) Kráľovská Kobyla, odbehla vo veku
-											22 rokov do večných pastvín<font>
-								</b></a><br></font></b></a>
-								</font></b></a><br></p>
-								</font>
-							</TD>
-						</TR>
-					</TABLE>
-				</TD>
-			</TR>
-
-			<TR>
-				<TD align="right" width="120" bgColor="#EEFFDD">
-					<a href="javascript:popImage('foto/2016divoky_vychod.jpg',':: RANČ TRANSYLWAHNJA :: ','');">
-						<img src="foto/2016divoky_vychodm.jpg" border="0" alt=""></a>
-				</TD>
-				<TD>
-					<TABLE cellSpacing="5" cellPadding="2" width="100%" border="0">
-						<TR bgColor="#EEFFDD">
-							<TD bgColor="#EEFFDD">
-								<font face="Verdana,Arial, Helvetica, sans-serif" size="xx-small">
-									<span class="info_text_xx-small">2016</span></font><br>
-								<B>
-									<font face="Verdana,Arial, Helvetica, sans-serif" size="x-small"><span
-											class="read_text">
-											Užívame si divoký východ na nekonečných vychádzkach<font>
-								</b></a><br></font></b></a>
-								</font></b></a><br></p>
-								</font>
-							</TD>
-						</TR>
-					</TABLE>
-				</TD>
-			</TR>
-
-
-			<TR>
-				<TD align="right" width="0" bgColor="#EEFFDD">
-				<TD>
-					<TABLE cellSpacing="5" cellPadding="2" width="100%" border="0">
-						<TR bgColor="#EEFFDD">
-							<TD bgColor="#EEFFDD">
-								<font face="Verdana, Arial, Helvetica, sans-serif" size="x-small"><span
-										class="read_text">
-										<b>ARCHÍV NOVINIEK:</b></font><br>
-								<font face="Verdana,Arial, Helvetica, sans-serif" size="xx-small"><span
-										class="info_text_xx-small">
-										<br>
-										1 | <a href="ranc.php?page_id=2">2</a> | <a href="ranc.php?page_id=3">3</a>
-									</span></font>
-								</p>
-								</span></font>
-							</TD>
-						</TR>
-					</TABLE>
-				</TD>
-			</TR>
-
-		</table>
+				<TR>
+					<TD align="right" width="120" bgColor="#EEFFDD">
+						<a href="javascript:popImage('foto/2016divoky_vychod.jpg',':: RANČ TRANSYLWAHNJA :: ','');">
+							<img src="foto/2016divoky_vychodm.jpg" border="0" alt=""></a>
+					</TD>
+					<TD>
+						<TABLE cellSpacing="5" cellPadding="2" width="100%" border="0">
+							<TR bgColor="#EEFFDD">
+								<TD bgColor="#EEFFDD">
+									<font face="Verdana,Arial, Helvetica, sans-serif" size="xx-small">
+										<span class="info_text_xx-small">2016</span></font><br>
+									<B>
+										<font face="Verdana,Arial, Helvetica, sans-serif" size="x-small"><span
+												class="read_text">
+												Užívame si divoký východ na nekonečných vychádzkach<font>
+									</b></a><br></font></b></a>
+									</font></b></a><br></p>
+									</font>
+								</TD>
+							</TR>
+						</TABLE>
+					</TD>
+				</TR>
+-->
+		</section>
+		<section class="pagination">
+			<h1>Archív noviniek</h1>
+			<p>
+				1 | <a href="ranc.php?page_id=2">2</a> | <a href="ranc.php?page_id=3">3</a>
+			</p>
+		</section>
 	</main>
-	<aside>
-		<TABLE cellSpacing="0" cellPadding="2" width="100%">
-
-			<tr>
-				<td align="center" valign=top bgcolor=#008040>
-					<font face=Arial color=black size=2><b>
-							<font color="#ffffff">O Z N A M</font>
-						</b></font>
-				</td>
-			</tr>
-			<TR>
-				<TD align="center" bgColor="#eeffdd"><BR>
-					<font face="Verdana, Arial, Helvetica, sans-serif" size="2">
-						<b><a href="foto/biotabor2010.pdf">
-								<font color="red" size="+1"><u>Biotábor</u></font>
-							</a></b>
-						<br>24.7.2010-1.8.2009<br>
-						<br>rezervujte si miesto!<br>
-						<br>stiahnite si
-						<br><a href="foto/biotabor2010.pdf">plagátik</a><br><br>
-						- - - - - - - - - - - - - - <br><br>
-						<font face="Verdana, Arial, Helvetica, sans-serif" size="2">
-							<b>
-								<font color="red" size="+1"><u>Predáme BIOZEMIAKY</u></font></a>
-							</b><br>
-							objednajte si<br><br>
-							- - - - - - - - - - - - - - <br><br>
-							<b>
-								<font color="red">Dovolenka u nás</font>
-							</b><br>poskytujeme ubytovanie<br><br></font>
-						<br><br>
-					</font>
-
-				</TD>
-			</TR>
-			<TR>
-				<TD align="left" bgColor="#eeffdd"><IMG height="1" src="img/pix0.gif" width="5"></TD>
-			</TR>
-
-
-			<tr>
-				<td align="center" valign=top bgcolor=#008040>
-					<font face=Arial color=black size=2><b>
-							<font color="#ffffff">L E T Á Č I K</font>
-						</b></font>
-				</td>
-			</tr>
-			<tr>
-				<td align="center">
-					<font face="Verdana, Arial, Helvetica, sans-serif" size="2">
-						<a href="foto/letak1.jpg">1.strana</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
-							href="foto/letak2.jpg">2.strana</a>
-						<br><br></font>
-				</td>
-			</tr>
-
-
-			<TR>
-				<TD align="left" bgColor="#eeffdd">
-					<TABLE width="100%" cellPadding="2" cellSpacing="0">
-
-						<tr>
-							<td align="center" valign=top bgcolor=#008040>
-								<font face=Arial color=black size=2><b>
-										<font color="#ffffff">STRATEGICKÍ PARTNERI</font>
-									</b></font>
-							</td>
-						</tr>
-					</TABLE><BR>
-					&nbsp;&nbsp;<A href="http://www.ffmm.sk">
-						<font face="Arial, Helvetica, sans-serif" size="2"><B> Mašekov Mlyn, Vráble</B></font>
-					</A><BR>
-					<IMG height=5 src="img/pix0.gif" width=1><BR>
-					&nbsp;&nbsp;<A href="http://www.biospotrebitel.sk">
-						<font face="Arial, Helvetica, sans-serif" size="2"><B> Biospotrebiteľ</B></font>
-					</A><BR>
-					<IMG height=5 src="img/pix0.gif" width=1><BR>
-					&nbsp;&nbsp;<A href="http://www.ekoprodukt.sk">
-						<font face="Arial, Helvetica, sans-serif" size="2"><B> Ekoprodukt</B></font>
-					</A><BR>
-					<IMG height=5 src="img/pix0.gif" width=1><BR>
-					&nbsp;&nbsp;<A href="http://www.anastasia.sk">
-						<font face="Arial, Helvetica, sans-serif" size="2"><B> Anastásia</B></font>
-					</A><BR>
-					<IMG height=5 src="img/pix0.gif" width=1><BR>
-					&nbsp;&nbsp;<A href="http://www.greenpeace.sk">
-						<font face="Arial, Helvetica, sans-serif" size="2"><B> Greenpeace</B></font>
-					</A><BR>
-					<IMG height=5 src="img/pix0.gif" width=1><BR>
-					&nbsp;&nbsp;<A href="http://www.biomed.sk/">
-						<font face="Arial, Helvetica, sans-serif" size="2"><B> Biomed</B></font>
-					</A><BR>
-					<IMG height=5 src="img/pix0.gif" width=1><BR>
-					&nbsp;&nbsp;<A href="http://www.bread.babinovo.sk/">
-						<font face="Arial, Helvetica, sans-serif" size="2"><B> Breadfriends</B></font>
-					</A><BR>
-					<IMG height=5 src="img/pix0.gif" width=1><BR>
-					&nbsp;&nbsp;<A href="http://www.trotting.sk/">
-						<font face="Arial, Helvetica, sans-serif" size="2"><B> Trotting Slovakia</B></font>
-					</A><BR>
-					<IMG height=5 src="img/pix0.gif" width=1><BR>
-					&nbsp;&nbsp;<A href="http://www.farmatuska.sk/">
-						<font face="Arial, Helvetica, sans-serif" size="2"><B> Farma Tuška</B></font>
-					</A><BR>
-				</TD>
-			</TR>
-			<TR>
-				<TD align="left" bgColor="#eeffdd"><IMG height="1" src="wrable/images_wrable/pix0.gif" width="5"></TD>
-			</TR>
-			<TR>
-
-			</TR>
-			<TR>
-				<TD align="left" bgColor="#eeffdd"><IMG height=1 src="wrable/images_wrable/pix0.gif" width=5>
-					<center>
-
-						<br>
-						<a
-							href="http://www.toplist.cz/stat/?menu=2048&menu=512&menu=4&menu=8&menu=16&menu=2&menu=1&kdy=dnes&n=217564">
-							<script language="JavaScript" type="text/javascript">
-									< !--
-									document.write('<img src="http://toplist.cz/count.asp?id=217564&logo=mc&start=10&http=' + escape(document.referrer) + '" width="88" height="60" border=0 alt="TOPlist" />');
-//--></script><noscript><img src="http://toplist.cz/count.asp?id=217564&logo=mc&start=10" border="0" alt="TOPlist"
-									width="88" height="60" /></noscript></a>
-
-
-					</center>
-				</TD>
-			</TR>
-			<TR>
-
-			</TR>
-
-			<TR>
-				<TD align="left" bgColor="#eeffdd"><IMG height="1" src="img/pix0.gif" width="5"></TD>
-			</TR>
-		</TABLE>
+	<aside id="right_panel">
+		<section>
+			<h1>Oznam</h1>
+			<div class="info">
+				<h2>Biotábor</h2>
+				<p>
+					24.7.2010-1.8.2009
+					<br>rezervujte si miesto!
+					<br>stiahnite si
+					<br><a href="foto/biotabor2010.pdf">plagátik</a>
+				</p>
+			</div>
+			<div class="info">
+				<h2>Predáme BIOZEMIAKY</h2>
+				<p>
+					objednajte si
+				</p>
+			</div>
+			<div class="info">
+				<h2>Dovolenka u nás</h2>
+				<p>
+					poskytujeme ubytovanie
+				</p>
+			</div>
+		</section>
+		<section>
+			<h1>Letáčik</h1>
+			<div class="info">
+				<p>
+					<a href="foto/letak1.jpg">1.strana</a>
+					<a href="foto/letak2.jpg">2.strana</a>
+				</p>
+			</div>
+		</section>
+		<section>
+			<h1>Strategickí partneri</h1>
+			<ul>
+				<li><a href="http://www.ffmm.sk">Mašekov Mlyn, Vráble</a></li>
+				<li><a href="http://www.biospotrebitel.sk">Biospotrebiteľ</a></li>
+				<li><a href="http://www.ekoprodukt.sk">Ekoprodukt</a></li>
+				<li><a href="http://www.anastasia.sk">Anastásia</a></li>
+				<li><a href="http://www.greenpeace.sk">Greenpeace</a></li>
+				<li><a href="http://www.biomed.sk">Biomed</a></li>
+				<li><a href="http://www.bread.babinovo.sk">Breadfriends</a></li>
+				<li><a href="http://www.trotting.sk">Trotting Slovakia</a></li>
+				<li><a href="http://www.farmatuska.sk">Farma Tuška</a></li>
+			</ul>
+		</section>
 	</aside>
 
-	<footer><span class="info_text_x-small">
-			&copy; <a href="http://www.transylwahnja.eu">www.transylwahnja.eu</a>, 2006-2007</span><BR>
-		</span>
+	<footer>
+		&copy; <a href="http://www.transylwahnja.eu">www.transylwahnja.eu</a>, 2006-2007
 	</footer>
 </body>
 
