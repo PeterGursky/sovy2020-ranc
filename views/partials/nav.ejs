@@ -1,14 +1,5 @@
 <ul>
-    <li><a href="ranc.php?page_id=o_nas">O nás</a></li>
-    <li><a href="ranc.php?page_id=biofarma">Biofarma</a></li>
-    <li><a href="ranc.php?page_id=kompostovanie">Kompostovanie</a></li>
-    <li><a href="ranc.php?page_id=zvierata">Zvieratá / Shirské kone</a></li>
-    <li><a href="ranc.php?page_id=produkty">Produkty</a></li>
-    <li><a href="ranc.php?page_id=turistika">Turistika</a></li>
-    <li><a href="ranc.php?page_id=aktivity">Aktivity</a></li>
-    <li><a href="ranc.php?page_id=brigada">Brigáda / Práca</a></li>
-    <li><a href="ranc.php?page_id=media">Médiá o nás</a></li>
-    <li><a href="ranc.php?page_id=fotogaleria">Fotogaléria</a></li>
-    <li><a href="ranc.php?page_id=ako_nas_najdete">Ako nás nájdete</a></li>
-    <li><a href="ranc.php?page_id=kontakt">Kontakt</a></li>
+<% menu.forEach((entry) => {%>
+    <li><a href="/<%= entry.local %>"><%= entry.label %></a></li>
+<% }) %>    
 </ul>
