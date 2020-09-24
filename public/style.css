@@ -1,13 +1,37 @@
 body {
+    display: grid;
+    grid-template-columns: auto max-content 800px 100px auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    ". header header header ."
+    ". nav main partners ."
+    ". footer footer footer .";
 }
 
 header {
+    grid-area: header;
 }
-
 header div#header_image {
 }
 header div#language_flags {
 }
 
+nav {
+    grid-area: nav;
+}
+main {
+    grid-area: main;
+    padding-left: 10px;
+}
+
+aside#right_panel {
+    grid-area: partners;
+}
+
+
 aside#right_panel section div.info {
+}
+
+footer {
+    grid-area: footer;
 }
